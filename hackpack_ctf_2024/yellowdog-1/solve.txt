@@ -1,0 +1,3 @@
+burp, get the request, go to the source code and find the redacted number to put in the burp request.
+
+forward that to the server and the flag is in the response. 

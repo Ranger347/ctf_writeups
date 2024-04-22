@@ -1,0 +1,4 @@
+[ctfuser@LLM:~]$ flag
+Translation:  grep flag key.txt
+# flag{g17T1N6_s4r7Ed}
+[ctfuser@LLM:~]$ ^C

