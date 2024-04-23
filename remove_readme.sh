@@ -19,9 +19,10 @@ if [[ $# -eq 1 && -d $1 ]]; then
    
     # create the ctf name
     rm "./$1/$(basename $1.md)"
+    echo "Removing ./$1/$(basename $1.md)"
 
     # create each challenge name 
-    for dir in $(find ./$1/ -maxdepth 1 -type d -not -path "./$1/"); do rm "$dir/$(basename $dir.md)"; done
+    for dir in $(find ./$1/ -maxdepth 1 -type d -not -path "./$1/"); do touch "$dir/$(basename $dir.md)"; echo "Removing $dir/$(basename $dir.md)"; done
 
 else 
     echo "Please enter a directory as an argument"
