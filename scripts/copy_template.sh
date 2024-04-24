@@ -23,7 +23,15 @@ if [[ $# -eq 1 && -d $1 ]]; then
     #echo "Copying template to ./$1/$(basename $1.md)"
 
     # create each challenge name 
-    for dir in $(find ./$1/ -maxdepth 1 -type d -not -path "./$1/"); do "cp ./scripts/challenge_template.md $dir/$(basename $dir.md)"; echo "Copying template to $dir/$(basename $dir.md)"; done
+    #for dir in $(find ./$1/ -maxdepth 1 -type d -not -path "./$1/"); do "cp ./scripts/challenge_template.md $dir/$(basename $dir.md)"; echo "Copying template to $dir/$(basename $dir.md)"; done
+    for dir in $(find ./$1/ -maxdepth 1 -type d -not -path "./$1/"); 
+    do 
+        # Copy the template to the markdown file
+        cp ./scripts/challenge_template.md "./$(basename $1)/$(basename $dir)/$(basename $dir).md";
+
+        # log the copy to the markdown file
+        echo "Copying template to ./$(basename $1)/$(basename $dir)/$(basename $dir).md";
+    done
 
 else 
     echo "Please enter a directory as an argument"

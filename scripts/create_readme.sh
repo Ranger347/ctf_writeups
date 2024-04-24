@@ -19,11 +19,23 @@ if [[ $# -eq 1 && -d $1 ]]; then
     #for dir in ./$1/*; do touch "$dir/$(basename $dir.md)"; done
    
     # create the ctf name
-    touch "./$1/$(basename $1.md)"
-    echo "Generating ./$1/$(basename $1.md)"
+    touch "./$(basename $1)/$(basename $1).md"
+    echo "Generating ./$(basename $1)/$(basename $1).md"
 
     # create each challenge name 
-    for dir in $(find ./$1/ -maxdepth 1 -type d -not -path "./$1/"); do touch "$dir/$(basename $dir.md)"; echo "Generating $dir/$(basename $dir.md)"; done
+    for dir in $(find ./$1/ -maxdepth 1 -type d -not -path "./$1/"); 
+    do 
+        # touch the markdown file
+        touch "./$(basename $1)/$(basename $dir)/$(basename $dir).md"; 
+        # log the generation of the markdown
+        echo "Generating ./$(basename $1)/$(basename $dir)/$(basename $dir).md"; 
+
+        # if a flag.txt doesn't exist, create it 
+        touch "./$(basename $1)/$(basename $dir)/flag.txt";
+
+        # log the generation of the flag file
+        echo "Generating ./$(basename $1)/$(basename $dir)/flag.txt"; 
+    done
 
 else 
     echo "Please enter a directory as an argument"
